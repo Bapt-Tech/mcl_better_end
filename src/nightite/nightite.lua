@@ -94,6 +94,35 @@ minetest.register_tool("mcl_better_end:nightite_sword", {
 })
 
 
+-- gpala
+mcl_tools.register_set("nightite", {
+    craftable = true,
+    material = "mcl_better_end:nightite_ingot",
+    uses = 2000,
+    level = 15,
+    speed = 9,
+    max_drop_level = 5,
+    groups = { dig_class_speed = 18, enchantability = 60}
+}, {
+    ["sword"] = {
+        description = ("Albanium Sword"),
+        inventory_image = "albanium_sword.png",
+        tool_capabilities = {
+            full_punch_interval = 0.625,
+            damage_groups = { fleshy = 10 }
+        }
+    },
+    ["axe"] = {
+        description = ("Albanium Axe"),
+        inventory_image = "albanium_axe.png",
+        tool_capabilities = {
+            full_punch_interval = 1,
+            damage_groups = { fleshy = 8 }
+        }
+    }
+}, { _mcl_cooking_output = "mcl_better_end:nightite_ingot" })
+
+
 
 mcl_armor.register_set({
     name = "nightite",
